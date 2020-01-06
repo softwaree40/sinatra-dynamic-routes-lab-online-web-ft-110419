@@ -27,14 +27,16 @@ class App < Sinatra::Base
         #binding.pry
          "#{params.map{|k,v| v }.join(' ')}."
       end
-      #   get '/:operation/:number1/:number2'
-      #       @number1 = params[:number1]
-      #       @number2 = params[:number2]
-      #       (@number1.to_i + @number2.to_i).to_s
-      #       (@number1.to_i - @number2.to_i).to_s
-      #       (@number1.to_i * @number2.to_i).to_s
-      #       (@number1.to_i / @number2.to_i).to_s
+      
+        get '/:operation/:number1/:number2'
+            @number1 = params[:number1]
+            @number2 = params[:number2]
+            binding.pry
+            # (@number1.to_i + @number2.to_i).to_s
+            # (@number1.to_i - @number2.to_i).to_s
+            # (@number1.to_i * @number2.to_i).to_s
+            # (@number1.to_i / @number2.to_i).to_s
            
-      #   end
+        end
     
 end
