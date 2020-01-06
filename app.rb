@@ -38,7 +38,7 @@ class App < Sinatra::Base
               "multiply" => "#{@number1 * @number2 }",
               "divide" => "#{@number1 / @number2 }",
             }
-             binding.pry
+            math[params[:operation]]
            
         end
     
