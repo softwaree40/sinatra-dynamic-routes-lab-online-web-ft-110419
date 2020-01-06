@@ -16,11 +16,12 @@ class App < Sinatra::Base
     end
     
     get '/say/:number/:phrase'  do
-      binding.pry
+      #binding.pry
+        rent = []
         @number = params[:number]
         @phrase = params[:phrase]
-        rent = []
-        @number.times{rent << @phrase }
+        @number.to_i.times{rent << @phrase }
+        rent
     end
       # get '/say/:word1/:word2/:word3/:word4/:word5' do 
       #     @word1 = params[:word1]
