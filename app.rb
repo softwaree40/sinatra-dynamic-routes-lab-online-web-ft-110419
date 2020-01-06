@@ -33,8 +33,10 @@ class App < Sinatra::Base
             @number2 = params[:number2]
             binding.pry
             math = {
-              "add" =>
-              
+              "add" => "#{}"
+              "subtract" =>
+              "multiply" =>
+              "divide" =>
             }
             # (@number1.to_i + @number2.to_i).to_s
             # (@number1.to_i - @number2.to_i).to_s
