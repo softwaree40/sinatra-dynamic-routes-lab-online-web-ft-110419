@@ -16,7 +16,7 @@ class App < Sinatra::Base
     end
     
     get '/say/:number/:phrase'  do
-      #binding.pry
+      binding.pry
         @number = params[:number]
         @phrase = params[:phrase]
         
