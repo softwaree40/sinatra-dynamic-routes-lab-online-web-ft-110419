@@ -17,25 +17,28 @@ class App < Sinatra::Base
     
     get '/say/:number/:phrase'  do
       #binding.pry
+        rent = []
         @number = params[:number]
         @phrase = params[:phrase]
-        
-        
+        @number.to_i.times{rent << @phrase }
+        rent
     end
-      get '/say/:word1/:word2/:word3/:word4/:word5' do 
-          @word1 = params[:word1]
-          @word2 = params[:word2]
-          @word3 = params[:word3]
-          @word4 = params[:word4]
-          @word5 = params[:word5]
+      get '/say/:word1/:word2/:word3/:word4/:word5' do
+        #binding.pry
+         "#{params.map{|k,v| v }.join(' ')}."
       end
-        get '/:operation/:number1/:number2'
-            @number1 = params[:number1]
-            @number2 = params[:number2]
-            (@number1.to_i + @number2.to_i).to_s
-            (@number1.to_i - @number2.to_i).to_s
-            (@number1.to_i * @number2.to_i).to_s
-            (@number1.to_i / @number2.to_i).to_s
+      
+        get '/:operation/:number1/:number2' do
+            @number1 = params[:number1].to_i
+            @number2 = params[:number2].to_i
+           
+            math = {
+              "add" => "#{@number1 + @number2 }",
+              "subtract" => "#{@number1 - @number2 }",
+              "multiply" => "#{@number1 * @number2 }",
+              "divide" => "#{@number1 / @number2 }",
+            }
+            math[params[:operation]]
            
         end
     
