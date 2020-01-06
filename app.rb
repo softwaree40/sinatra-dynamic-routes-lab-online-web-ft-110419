@@ -19,7 +19,7 @@ class App < Sinatra::Base
       binding.pry
         @number = params[:number]
         @phrase = params[:phrase]
-        
+        rent = []
       
     end
       # get '/say/:word1/:word2/:word3/:word4/:word5' do 
