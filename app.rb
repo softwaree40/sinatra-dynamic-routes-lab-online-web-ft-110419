@@ -31,17 +31,14 @@ class App < Sinatra::Base
         get '/:operation/:number1/:number2' do
             @number1 = params[:number1].to_i
             @number2 = params[:number2].to_i
-            binding.pry
+           
             math = {
-              "add" => "#{}"
-              "subtract" =>
-              "multiply" =>
-              "divide" =>
+              "add" => "#{@number1 + @number2 }",
+              "subtract" => "#{@number1 - @number2 }",
+              "multiply" => "#{@number1 * @number2 }",
+              "divide" => "#{@number1 / @number2 }",
             }
-            # (@number1.to_i + @number2.to_i).to_s
-            # (@number1.to_i - @number2.to_i).to_s
-            # (@number1.to_i * @number2.to_i).to_s
-            # (@number1.to_i / @number2.to_i).to_s
+             binding.pry
            
         end
     
