@@ -23,7 +23,8 @@ class App < Sinatra::Base
         @number.to_i.times{rent << @phrase }
         rent
     end
-      get '/say/:word1/:word2/:word3/:word4/:word5' do 
+      get '/say/:word1/:word2/:word3/:word4/:word5' do
+        binding.pry
           # @word1 = params[:word1]
           # @word2 = params[:word2]
           # @word3 = params[:word3]
