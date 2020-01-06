@@ -24,7 +24,7 @@ class App < Sinatra::Base
         rent
     end
       get '/say/:word1/:word2/:word3/:word4/:word5' do
-        binding.pry
+        #binding.pry
          params.map{|k,v| v }.join(' ')
       end
       #   get '/:operation/:number1/:number2'
